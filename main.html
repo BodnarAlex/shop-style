@@ -1,117 +1,183 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <link href="assets/style.css" rel="stylesheet" type="text/css">
-  <script src="assets/index.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalog</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+    <script src="assets/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
 </head>
+
 <body id="body">
-  <div class="body__wrapper">
-    <header>
-        <div>Lion P.</div>
-        <h1>The Geek shop</h1>
-        <div class="logout"></div>
-    </header>
+    <div class="body__wrapper">
+        <header>
+            <div>Lion P.</div>
+            <h1>The Geek shop</h1>
+            <div class="logout"></div>
+        </header>
 
-      <main>
-          <div class="main">
-              <div class="banner"></div>
-              <div class="menu">
-                <div>Movie</div>
-                <div>Anime</div>
-                <div>Game</div>
-                <div>Сlothing</div>
-                <div>Gift</div>
-              </div>
+        <main>
+            <div class="catalog">
 
-              <div class="catalog">
-                <div class="filter"></div>
-                <div class="items">
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€9</div>
+                <div class="menu">
+                    <div>Catalog</div>
+                    <div>Movie</div>
+                    <div>Anime</div>
+                    <div>Game</div>
+                    <div>Сlothing</div>
+                    <div>Gift</div>
+                </div>
+
+                <div class="main-view">
+                    <div class="filter">
+                        <div>Category</div>
+                        <ol>
+                            <li>Anime
+                                <ol>
+                                    <li>
+                                        Figures
+                                    </li>
+                                    <li>Keychains</li>
+                                    <li>Posters</li>
+                                </ol>
+                            </li>
+                            <li>Сlothing
+                                <ol>
+                                    <li>
+                                        T-shirt
+                                    </li>
+                                    <li>Dress</li>
+                                    <li>Cosplay</li>
+                                </ol>
+                            </li>
+                        </ol>
+                        <div>
+                            <div>Develiry</div>
+
+                            <label>
+                                <input type="radio" name="delivery" value="standard">
+                                1 day
+                            </label><br>
+
+                            <label>
+                                <input type="radio" name="delivery" value="express">
+                                2-5 days
+                            </label><br>
+
+                            <label>
+                                <input type="radio" name="delivery" value="same-day">
+                                week
+                            </label><br>
+                        </div>
+                        <div>
+                            <div>Country of origin</div>
+
+                            <label>
+                                <input type="checkbox" name="country" value="china">
+                                China
+                            </label><br>
+
+                            <label>
+                                <input type="checkbox" name="country" value="japan">
+                                Japan
+                            </label><br>
+
+                            <label>
+                                <input type="checkbox" name="country" value="korea">
+                                Korea
+                            </label><br>
+                        </div>
+                        <div>
+                            <label for="price">Price</label>Price
+                            <input type="range" name="price" id="price">
+                        </div>
+                        <button>All filters</button>
                     </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€10</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
-                    </div>
-                    <div class="item">
-                        <div class="image"></div>
-                        <div class="name">Official Resident Evil Nemesis</div>
-                        <div class="price">€19</div>
+                    <div class="items">
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€9</div>
+                        </div>
+                        <div class="item">
+                            <div class="image2"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image3"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image2"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€10</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
+                        <div class="item">
+                            <div class="image"></div>
+                            <div class="name">Official Resident Evil Nemesis</div>
+                            <div class="price">€19</div>
+                        </div>
                     </div>
                 </div>
-              </div>
-          </div>
-      </main>
-      <footer>
-          <div class="footer__link"> 2024 </div>
-      </footer>
-  </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer__link"> 2024 </div>
+        </footer>
+    </div>
 
 </body>
 

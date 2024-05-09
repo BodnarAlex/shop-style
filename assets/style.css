@@ -16,7 +16,6 @@ body {
     width: 100svw;
     height: 100svh;
     margin: 0;
-    overflow: hidden;
     color: var(--main-color-first);
 }
 
@@ -66,7 +65,7 @@ h2::after {
     left: 25%;
     width: 50%;
     height: 2px;
-    background:  linear-gradient(90deg, var(--main-color-first), var(--main-color-second));
+    background: linear-gradient(90deg, var(--main-color-first), var(--main-color-second));
 }
 
 footer {
@@ -155,6 +154,10 @@ input:focus {
 
 /* CATALOG */
 
+.catalog {
+    width: 100%;
+}
+
 .logout {
     background: url(./img/logout.svg);
     width: 25px;
@@ -164,4 +167,62 @@ input:focus {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+}
+
+.menu {
+    background: var(--main-color-second);
+    width: 100%;
+    border-bottom: 1px solid var(--main-color-first);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-view{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: start;
+    margin: 20px 20px;
+}
+
+.items {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.item {
+    width: 250px;
+    height: 280px;
+    border: 1px solid var(--main-color-second);
+}
+
+.image {
+    background: url(./img/duck.png);
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image2 {
+    background: url(./img/sword.png);
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image3 {
+    background: url(./img/secat.jpg);
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
