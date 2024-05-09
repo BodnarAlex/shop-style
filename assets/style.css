@@ -1,12 +1,12 @@
 :root {
-    --blu: #00215e;
-    --orange: #fc4100;
-    --green: #0ed145;
-    --yellow: #ffc55a;
-    --light-blue: #2c4e80: --white: white;
-
+    --main-color-first: #00215e;
+    --error-color: #fc4100;
+    --main-color-second: #0ed145;
+    --main-color-second-half: rgba(14, 209, 69, 0.5);
+    --constract-text-color: white;
 }
 
+/* COMMON */
 
 * {
     box-sizing: border-box;
@@ -17,24 +17,24 @@ body {
     height: 100svh;
     margin: 0;
     overflow: hidden;
+    color: var(--main-color-first);
 }
 
 header {
     width: 100%;
-
-    background: var(--blu);
-}
-
-footer {
-    width: 100%;
-    background: var(--green);
+    background: var(--main-color-first);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    justify-content: space-around;
+    color: var(--constract-text-color);
+    font-size: 19px;
 }
 
 .body__wrapper {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    max-width: 1200px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -42,48 +42,73 @@ footer {
 }
 
 h1 {
-    color: var(--blu);
+    color: var(--main-color-first);
     text-shadow:
-        -1px -1px 0 var(--green),
-        1px -1px 0 var(--green),
-        -1px 1px 0 var(--green),
-        1px 1px 0 var(--green);
+        -1px -1px 0 var(--main-color-second),
+        1px -1px 0 var(--main-color-second),
+        -1px 1px 0 var(--main-color-second),
+        1px 1px 0 var(--main-color-second);
     font-size: 50px;
     text-align: center;
-    margin: 40px 0 20px;
+    margin: 25px 0;
+}
+
+h2 {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background:  linear-gradient(90deg, var(--main-color-first), var(--main-color-second));
+}
+
+footer {
+    width: 100%;
+    background: var(--main-color-first);
 }
 
 .footer__link {
-    color: var(--blue);
+    color: var(--constract-text-color);
     font-size: 21px;
     text-align: center;
     margin: 40px 0 20px;
 }
 
+/* FORM */
+
 span {
     font-size: 14px;
     text-align: right;
-    color: var(--orange);
+    color: var(--error-color);
     width: 100%;
     margin: -20px 0 -10px;
 }
 
 form {
     width: 400px;
-    height: 450px;
+    height: 500px;
     border-radius: 15px;
-    padding: 10px 30px;
+    padding: 0 30px 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    color: var(--blu);
+    color: var(--main-color-first);
     font-size: 20px;
     border-width: 5px;
     border-style: solid;
+    border-image: linear-gradient(45deg, var(--main-color-first), var(--main-color-second)) 5;
     border-image-slice: 1;
-    border-image: linear-gradient(45deg, var(--blu), var(--green)) 5;
-    background: white;
+    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: var(--constract-text-color);
 }
 
 .group {
@@ -94,12 +119,49 @@ form {
     align-items: center;
 }
 
-button{
+input {
+    height: 30px;
+    border: 1px solid var(--main-color-first);
+    border-radius: 5px;
+    color: var(--main-color-first);
+}
+
+button {
     width: 80px;
     height: 40px;
-    border: 1px solid var(--blu);
-    background: var(--blu);
+    border: 1px solid var(--main-color-first);
+    background: var(--main-color-first);
     border-radius: 6px;
-    color: white;
+    color: var(--constract-text-color);
     font-size: 16px;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+button:hover {
+    box-shadow: -5px 5px 5px var(--main-color-second-half);
+    transition: all 500ms;
+    transform: translateY(-2px);
+}
+
+.invalid,
+input.invalid:focus {
+    box-shadow: 0 0 7px var(--error-color);
+}
+
+input:focus {
+    box-shadow: 0 0 7px var(--main-color-second-half);
+}
+
+/* CATALOG */
+
+.logout {
+    background: url(./img/logout.svg);
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }
