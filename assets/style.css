@@ -53,13 +53,15 @@ h1 {
     margin: 25px 0;
 }
 
-h2 {
+h2,
+h3 {
     width: 100%;
     position: relative;
     text-align: center;
 }
 
 h2::after,
+h3::after,
 .menu::after {
     content: '';
     position: absolute;
@@ -94,7 +96,7 @@ main {
 }
 
 .catalog_main {
-    background-size: inherit;
+    background-size: 700px;
 }
 
 main.register {
@@ -255,7 +257,8 @@ input:focus {
 
 .main-view {
     display: flex;
-    margin: 40px auto;
+    margin: 0 auto;
+    padding: 2% 10%;
     max-width: 1400px;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -337,10 +340,15 @@ input:focus {
     width: 20%;
     background-color: var(--constract-text-color);
     border-width: 2px;
-    padding: 5px;
+    padding:  5px 20px 20px;
+    min-width: 250px;
     border-style: solid;
     border-image: linear-gradient(45deg, var(--main-color-first), var(--main-color-second)) 5;
     border-image-slice: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .item_info {
@@ -369,4 +377,39 @@ input:focus {
     transition: all 500ms;
     border: 1px solid var(--main-color-second);
     align-self: end;
+}
+
+.filter div{
+    width: 100%;
+}
+
+.filter .filter_btn {
+    align-self: end;
+}
+
+.group.start{
+    justify-content: start;
+    gap: 10px;
+}
+
+#price {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, var(--main-color-first), var(--main-color-second));
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+#price::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--constract-text-color);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--main-color-first);
+
 }
