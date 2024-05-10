@@ -17,6 +17,7 @@ body {
     height: 100svh;
     margin: 0;
     color: var(--main-color-first);
+    overflow-x: hidden;
 }
 
 header {
@@ -26,9 +27,10 @@ header {
     display: flex;
     flex-flow: row nowrap;
     align-items: baseline;
-    justify-content: space-around;
+    justify-content: space-between;
     color: var(--constract-text-color);
     font-size: 19px;
+    padding: 0 10%;
 }
 
 .body__wrapper {
@@ -340,7 +342,7 @@ input:focus {
     width: 20%;
     background-color: var(--constract-text-color);
     border-width: 2px;
-    padding:  5px 20px 20px;
+    padding: 5px 20px 20px;
     min-width: 250px;
     border-style: solid;
     border-image: linear-gradient(45deg, var(--main-color-first), var(--main-color-second)) 5;
@@ -379,7 +381,7 @@ input:focus {
     align-self: end;
 }
 
-.filter div{
+.filter div {
     width: 100%;
 }
 
@@ -387,29 +389,88 @@ input:focus {
     align-self: end;
 }
 
-.group.start{
+.group.start {
     justify-content: start;
     gap: 10px;
 }
 
 #price {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 10px;
-  background: linear-gradient(90deg, var(--main-color-first), var(--main-color-second));
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 30px;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, var(--main-color-first), var(--main-color-second));
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
 }
 
 #price::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  background: var(--constract-text-color);
-  border-radius: 50%;
-  cursor: pointer;
-  border: 1px solid var(--main-color-first);
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--constract-text-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid var(--main-color-first);
+}
 
+@media (max-width: 1015px) {
+    .catalog_item {
+        display: none;
+    }
+
+    .main-view {
+        flex-flow: column wrap;
+    }
+
+    .filter {
+        width: 100%;
+        margin-bottom: 25px;
+        flex-flow: row nowrap;
+        align-items: start;
+    }
+
+    .items {
+        width: 100%;
+    }
+
+    .item {
+        width: 230px;
+    }
+
+    .filter .filter_btn {
+        width: 300px;
+    }
+}
+
+@media (max-width: 700px) {
+    .filter {
+        width: 100%;
+        flex-flow: row wrap;
+    }
+
+    .filter div {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .register .main,
+    .form {
+        width: 350px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    header {
+        padding: 0 2%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
 }
