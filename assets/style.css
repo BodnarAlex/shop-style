@@ -279,6 +279,9 @@ input:focus {
     color: var(--constract-text-color);
     border: 1px solid var(--main-color-first);
     transition: all 500ms;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
 }
 
 .item:hover {
@@ -291,6 +294,12 @@ input:focus {
 
 .item:hover .images {
     background-size: 110%;
+}
+
+.item:hover .buy_btn {
+    background: var(--main-color-first);
+    color: var(--constract-text-color);
+    transition: all 500ms;
 }
 
 .images {
@@ -332,4 +341,32 @@ input:focus {
     border-style: solid;
     border-image: linear-gradient(45deg, var(--main-color-first), var(--main-color-second)) 5;
     border-image-slice: 1;
+}
+
+.item_info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: unset;
+    gap: 15px;
+    padding: 8px;
+}
+
+.name {
+    width: 100%;
+    font-size: 17px;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.buy_btn {
+    background: var(--constract-text-color);
+    color: var(--main-color-first);
+    transition: all 500ms;
+    border: 1px solid var(--main-color-second);
+    align-self: end;
 }
